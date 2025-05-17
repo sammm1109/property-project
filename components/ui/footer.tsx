@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/images/property/logo_big.png";
 import { FooterList } from "../enum";
+import Image from "../common/Image";
 
 export default function Footer({ border = false }: { border?: boolean }) {
   return (

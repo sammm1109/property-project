@@ -1,5 +1,5 @@
 import Map from "@/public/images/property/img_map1.jpg";
-import Image from "next/image";
+import Image from "./common/Image";
 
 export default function LocationMap() {
   return (

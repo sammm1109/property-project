@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import CorporateImg from "@/public/images/property/corporate.jpg";
 import WhatsappImg from "@/public/images/property/whatsapp.png";
 import LuxuryImg from "@/public/images/property/corp2.jpg";
 import { OfficeLayoutTabs } from "./enum";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "./common/Image";
 
 export default function CorporateSuites() {
   const [activeTab, setActiveTab] = useState(0);
@@ -120,7 +120,7 @@ export default function CorporateSuites() {
               navigation
               pagination={{ clickable: true }} // Enable pagination dots
               onSwiper={(swiper) => console.log(swiper)} // Debugging swiper instance
-              onSlideChange={() => console.log("slide change")} // Slide change event
+              // onSlideChange={() => console.log("slide change")} // Slide change event
               className="text-center"
             >
               {OfficeLayoutTabs[activeTab].image.map((image, index) => (

@@ -1,6 +1,6 @@
-import Image from "next/image";
 import LuxuryImg from "@/public/images/property/luxury.jpg";
 import WhatsappImg from "@/public/images/property/whatsapp.png";
+import Image from "./common/Image";
 
 export default function LuxuryResidence() {
   return (
