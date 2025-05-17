@@ -88,7 +88,7 @@ export default function CorporateSuites() {
       {/* RESIDENTIAL Layout */}
       <div className="mx-auto px-5 md:px-20 py-10 bg-[#371809] flex flex-col gap-8">
         <div
-          className="text-6xl text-center text-[#caa777] tracking-wide"
+          className="text-5xl md:text-6xl text-center text-[#caa777] tracking-wide"
           style={{ fontFamily: "ACaslonPro-Regular" }}
         >
           OFFICE LAYOUT
@@ -133,10 +133,11 @@ export default function CorporateSuites() {
         </div>
 
         <div className="text-center">
-          <a className="btn bg-green-500 text-gray-800" href="#0">
-            <span className="text-lg text-white font-semibold">
-              WHATSAPP FOR LATEST PRICING
-            </span>
+          <a
+            href="#0"
+            className="block w-full sm:w-auto btn bg-green-500 text-white font-semibold text-center text-base sm:text-lg px-4 py-2 rounded-md hover:bg-green-600 transition"
+          >
+            WHATSAPP FOR LATEST PRICING
           </a>
         </div>
       </div>
