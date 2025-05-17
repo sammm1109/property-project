@@ -1,1 +1,1 @@
-{"/_not-found/page":"/_not-found","/api/hello/route":"/api/hello","/(default)/page":"/","/(auth)/signup/page":"/signup","/(auth)/signin/page":"/signin","/(auth)/reset-password/page":"/reset-password"}
+{"/api/hello/route":"/api/hello","/_not-found/page":"/_not-found","/(auth)/signin/page":"/signin","/(auth)/reset-password/page":"/reset-password","/(auth)/signup/page":"/signup","/(default)/page":"/"}

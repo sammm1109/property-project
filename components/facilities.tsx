@@ -22,12 +22,12 @@ export default function Facilities() {
           alt="corporate_img"
         />
 
-        <div className="flex flex-col gap-4 text-lg m-auto py-5 px-20">
+        <div className="flex flex-col gap-4 text-lg m-auto py-5 px-5 md:px-20">
           <p
             className="text-5xl w-[90%] tracking-wide text-amber-950"
             style={{ fontFamily: "ACaslonPro-Regular" }}
           >
-            OVER 70,000 SQ FT OF LIFESTYLE FACILITIES
+            OVER 70,000 SQFT OF LIFESTYLE FACILITIES
           </p>
           <p className="tracking-wide text-2xl text-amber-950">
             Unwind and play in exceptional spaces
