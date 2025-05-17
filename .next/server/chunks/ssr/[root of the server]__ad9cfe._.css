@@ -473,6 +473,10 @@
     height: 500px;
   }
 
+  .h-auto {
+    height: auto;
+  }
+
   .h-full {
     height: 100%;
   }
@@ -513,6 +517,10 @@
     width: 572px;
   }
 
+  .w-auto {
+    width: auto;
+  }
+
   .w-full {
     width: 100%;
   }
@@ -527,6 +535,10 @@
 
   .max-w-6xl {
     max-width: var(--container-6xl);
+  }
+
+  .max-w-full {
+    max-width: 100%;
   }
 
   .max-w-none {
@@ -937,6 +949,10 @@
 
   .p-6 {
     padding: calc(var(--spacing) * 6);
+  }
+
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
   }
 
   .px-3 {
@@ -1557,14 +1573,50 @@
   }
 
   @media (width >= 48rem) {
+    .md\:col-span-3 {
+      grid-column: span 3 / span 3;
+    }
+  }
+
+  @media (width >= 48rem) {
     .md\:col-span-6 {
       grid-column: span 6 / span 6;
     }
   }
 
   @media (width >= 48rem) {
+    .md\:col-span-9 {
+      grid-column: span 9 / span 9;
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:flex {
+      display: flex;
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:h-10 {
+      height: calc(var(--spacing) * 10);
+    }
+  }
+
+  @media (width >= 48rem) {
     .md\:h-20 {
       height: calc(var(--spacing) * 20);
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:h-30 {
+      height: calc(var(--spacing) * 30);
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:h-100 {
+      height: calc(var(--spacing) * 100);
     }
   }
 
@@ -1577,6 +1629,18 @@
   @media (width >= 48rem) {
     .md\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:justify-start {
+      justify-content: flex-start;
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:px-5 {
+      padding-inline: calc(var(--spacing) * 5);
     }
   }
 
@@ -1607,6 +1671,14 @@
   @media (width >= 48rem) {
     .md\:pb-20 {
       padding-bottom: calc(var(--spacing) * 20);
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:text-5xl {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+      letter-spacing: var(--tw-tracking, var(--text-5xl--letter-spacing));
     }
   }
 

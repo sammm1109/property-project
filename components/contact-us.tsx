@@ -48,7 +48,7 @@ export const ContactForm = () => {
   return (
     <section id="contact-us">
       <div
-        className="relative w-full h-[500px] flex flex-col gap-8 px-20 py-10"
+        className="relative w-full flex flex-col gap-8 px-5 md:px-20 py-10"
         style={{
           backgroundImage: `url(${Image.src})`,
           backgroundRepeat: "no-repeat",
@@ -60,7 +60,7 @@ export const ContactForm = () => {
 
         {/* Form Heading */}
         <div
-          className="text-5xl tracking-wide text-white z-10 text-center"
+          className="text-4xl md:text-5xl tracking-wide text-white z-10 text-center"
           style={{ fontFamily: "ACaslonPro-Regular" }}
         >
           REGISTER YOUR INTEREST NOW !
@@ -72,8 +72,8 @@ export const ContactForm = () => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4 z-10">
-            <div className="grid grid-cols-12 gap-10 mx-auto max-w-6xl ">
-              <div className="col-span-6">
+            <div className="grid grid-cols-12 gap-4">
+              <div className="col-span-12 md:col-span-6">
                 {/* Name */}
                 <div>
                   <label className="block text-lg font-medium text-white">
@@ -108,7 +108,7 @@ export const ContactForm = () => {
                   )}
                 </div>
               </div>
-              <div className="col-span-6">
+              <div className="col-span-12 md:col-span-6">
                 {/* Purpose */}
                 <label className="block text-lg font-medium text-white">
                   Purpose

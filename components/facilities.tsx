@@ -50,14 +50,14 @@ export default function Facilities() {
         </div>
       </div>
       {/* Facilities Plan */}
-      <div className="mx-auto px-20 py-10 bg-[#371809] flex flex-col gap-8">
+      <div className="mx-auto px-5 md:px-20 py-10 bg-[#371809] flex flex-col gap-8">
         <div
           className="text-6xl text-center text-[#ff6602] tracking-wide"
           style={{ fontFamily: "ACaslonPro-Regular" }}
         >
           FACILITIES PLAN
         </div>
-        <div className="flex justify-between bg-[#a4725ab3] rounded-2xl py-2 px-5">
+        <div className="flex justify-between bg-[#a4725ab3] rounded-2xl py-2 px-1 md:px-5">
           {FacilitiesTabs.map((tab, index) => (
             <button
               key={index}
@@ -109,14 +109,14 @@ export default function Facilities() {
         </div>
       </div>
       {/* RESIDENTIAL Layout */}
-      <div className="mx-auto px-20 py-10 bg-orange-500 flex flex-col gap-8">
+      <div className="mx-auto px-5 md:px-20 py-10 bg-orange-500 flex flex-col gap-8">
         <div
           className="text-6xl text-center text-[#371809] tracking-wide"
           style={{ fontFamily: "ACaslonPro-Regular" }}
         >
           RESIDENTIAL LAYOUT
         </div>
-        <div className="flex justify-between bg-[#371809] rounded-2xl py-2 px-5">
+        <div className="flex justify-between bg-[#371809] rounded-2xl py-2 px-1 md:px-5">
           {ResidentialLayoutTabs.map((tab, index) => (
             <button
               key={index}

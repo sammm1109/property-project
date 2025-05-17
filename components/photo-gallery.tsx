@@ -21,7 +21,7 @@ export default function PhotoGallery() {
   return (
     <section id="gallery">
       {/* Facilities Plan */}
-      <div className="mx-auto px-20 py-10 bg-[#ff6602] flex flex-col gap-8">
+      <div className="mx-auto px-5 md:px-20 py-10 bg-[#ff6602] flex flex-col gap-8">
         <div
           className="text-6xl text-center text-[#371809] tracking-wide"
           style={{ fontFamily: "ACaslonPro-Regular" }}
@@ -74,7 +74,7 @@ export default function PhotoGallery() {
             </div>
 
             {/* Custom Pagination (Thumbnails) */}
-            <div className="custom-pagination flex justify-center mt-2 gap-2 ">
+            <div className="custom-pagination hidden md:flex justify-center mt-2 gap-2">
               {PhotoGalleryTabs[activeTab].image.map((img, index) => (
                 <Image
                   key={index}

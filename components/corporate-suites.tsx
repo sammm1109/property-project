@@ -55,7 +55,7 @@ export default function CorporateSuites() {
           alt="corporate_img"
         />
 
-        <div className="flex flex-col gap-4 text-lg m-auto py-5 px-20">
+        <div className="flex flex-col gap-4 text-lg m-auto py-5 px-5 md:px-20">
           <p
             className="text-5xl w-[90%] tracking-wide text-amber-950"
             style={{ fontFamily: "ACaslonPro-Regular" }}
@@ -82,7 +82,7 @@ export default function CorporateSuites() {
       </div>
 
       {/* RESIDENTIAL Layout */}
-      <div className="mx-auto px-20 py-10 bg-[#371809] flex flex-col gap-8">
+      <div className="mx-auto px-5 md:px-20 py-10 bg-[#371809] flex flex-col gap-8">
         <div
           className="text-6xl text-center text-[#caa777] tracking-wide"
           style={{ fontFamily: "ACaslonPro-Regular" }}
