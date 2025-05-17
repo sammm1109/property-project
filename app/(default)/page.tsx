@@ -4,8 +4,6 @@ export const metadata = {
 };
 
 import HomePage from "@/components/home";
-import LargeTestimonial from "@/components/large-testimonial";
-import Cta from "@/components/cta";
 import LocationMap from "@/components/location-map";
 import LuxuryResidence from "@/components/luxury-residence";
 import Facilities from "@/components/facilities";
