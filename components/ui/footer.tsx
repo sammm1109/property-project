@@ -8,7 +8,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
     <footer>
       <div className="bg-[#371807]">
         <div className="mx-auto max-w-6xl py-10 sm:px-6 ">
-          <div className="grid grid-cols-12 gap-10 sm:px-6 text-center">
+          <div className="grid grid-cols-12 gap-5 sm:px-6 text-center">
             <div className="col-span-12 md:col-span-3 flex justify-center md:justify-start">
               <Image
                 src={Logo}
@@ -17,7 +17,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               />
             </div>
             <div className="col-span-12 md:col-span-9">
-              <div className="grid grid-cols-12 gap-10 ">
+              <div className="grid grid-cols-12 gap-5">
                 {FooterList.map((footer, index) => (
                   <div
                     key={index}
