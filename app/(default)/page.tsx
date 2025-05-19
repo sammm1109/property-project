@@ -1,8 +1,5 @@
-export const metadata = {
-  title: "Home - Simple",
-  description: "Page description",
-};
-
+// app/page.tsx
+import Head from "next/head";
 import HomePage from "@/components/home";
 import LocationMap from "@/components/location-map";
 import LuxuryResidence from "@/components/luxury-residence";
@@ -11,9 +8,51 @@ import CorporateSuites from "@/components/corporate-suites";
 import PhotoGallery from "@/components/photo-gallery";
 import { ContactForm } from "@/components/contact-us";
 
+export const metadata = {
+  title: "Home - Simple",
+  description:
+    "Discover the best solution for your business with our powerful tools.",
+
+  // Open Graph Meta Tags for Facebook
+  openGraph: {
+    title: "Home - Simple", // OG Title
+    description:
+      "Discover the best solution for your business with our powerful tools.", // OG Description
+    url: "https://yourdomain.com", // URL of the page
+    siteName: "My Awesome Product", // Name of the site
+    images: [
+      {
+        url: "https://yourdomain.com/og-image.jpg", // OG Image URL
+        width: 1200,
+        height: 630,
+        alt: "My Product OG Image", // Alt text for image
+        secure_url: "https://yourdomain.com/og-image.jpg", // Optional but recommended
+      },
+    ],
+    locale: "en_US", // Locale of the page
+    type: "website", // Type of the content (use "website" for most sites)
+  },
+
+  // Twitter Card Meta Tags for Twitter
+  twitter: {
+    card: "summary_large_image", // Card type (summary with a large image)
+    title: "Home - Simple", // Twitter Title
+    description: "Discover the best solution for your business...", // Twitter Description
+    images: ["https://yourdomain.com/og-image.jpg"], // Twitter Image URL
+    site: "@your_twitter_handle", // Your Twitter handle
+  },
+};
+
 export default function Home() {
   return (
     <>
+      <Head>
+        <meta property="og:locale:alternate" content="fr_FR" />
+        <meta property="og:locale:alternate" content="de_DE" />
+        {/* Add any other custom SEO/meta tags here if needed */}
+      </Head>
+
+      {/* Landing page sections */}
       <HomePage />
       <LocationMap />
       <LuxuryResidence />
