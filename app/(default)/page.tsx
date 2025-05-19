@@ -11,39 +11,53 @@ import { ContactForm } from "@/components/contact-us";
 export const metadata = {
   title: "Pavilion Square | Home",
   description:
-    "Discover the best solution for your business with our powerful tools.",
+    "Trusted Property Consultant With Proven Track Record And Reviews",
   icons: {
     icon: "/logo_big.png", // PNG favicon for the browser tab
     apple: "/logo_big.png", // Apple touch icon for iOS
     android: "/logo_big.png", // Android icon
   },
+  other: {
+    canonical: "https://pavilion-square-project.web.app/",
+    robots:
+      "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "fb:pages": "",
+    "fb:admins": "",
+    "fb:app_id": "",
+  },
   // Open Graph Meta Tags for Facebook
   openGraph: {
-    title: "Home - Simple", // OG Title
+    title:
+      "Pavilion Square - Trusted Property Consultant With Proven Track Record And Reviews ",
     description:
-      "Discover the best solution for your business with our powerful tools.", // OG Description
-    url: "https://yourdomain.com", // URL of the page
-    siteName: "My Awesome Product", // Name of the site
+      "Trusted Property Consultant With Proven Track Record And Reviews",
+    url: "https://pavilion-square-project.web.app/",
+    siteName: "Pavilion Square",
     images: [
       {
-        url: "https://yourdomain.com/og-image.jpg", // OG Image URL
+        url: "https://pavilion-square-project.web.app/_next/static/media/luxury.113d0e0c.jpg", // OG Image URL
         width: 1200,
         height: 630,
-        alt: "My Product OG Image", // Alt text for image
-        secure_url: "https://yourdomain.com/og-image.jpg", // Optional but recommended
+        alt: "Pavilion Square Project",
+        secure_url:
+          "https://pavilion-square-project.web.app/_next/static/media/luxury.113d0e0c.jpg",
       },
     ],
-    locale: "en_US", // Locale of the page
-    type: "website", // Type of the content (use "website" for most sites)
+    locale: "en_US",
+    type: "website",
   },
 
   // Twitter Card Meta Tags for Twitter
   twitter: {
-    card: "summary_large_image", // Card type (summary with a large image)
-    title: "Home - Simple", // Twitter Title
-    description: "Discover the best solution for your business...", // Twitter Description
-    images: ["https://yourdomain.com/og-image.jpg"], // Twitter Image URL
-    site: "@your_twitter_handle", // Your Twitter handle
+    card: "summary",
+    title:
+      "Pavilion Square - Trusted Property Consultant With Proven Track Record And Reviews ",
+    description:
+      "Trusted Property Consultant With Proven Track Record And Reviews",
+    images: [
+      "https://pavilion-square-project.web.app/_next/static/media/luxury.113d0e0c.jpg",
+    ], // Twitter Image URL
+    site: "@pavilion-square",
   },
 };
 
@@ -51,8 +65,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta name="description" content="Discover luxury properties." />
-        {/* If you want a specific favicon */}
         <link rel="icon" type="image/png" href="/favicon.png" />
         <meta
           name="google-site-verification"
