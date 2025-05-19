@@ -1,6 +1,6 @@
-import Image from "next/image";
 import HeaderImg from "@/public/images/property/header.jpg";
 import Logo from "@/public/images/property/logo_big.png";
+import Image from "./common/Image";
 
 export default function Home() {
   return (
@@ -16,7 +16,6 @@ export default function Home() {
           {/* Logo */}
           <div className="flex justify-center">
             <Image
-              priority={false}
               className="relative"
               src={Logo}
               width={250}

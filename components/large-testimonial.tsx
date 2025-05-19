@@ -1,5 +1,5 @@
-import Image from "next/image";
 import TestimonialImg from "@/public/images/large-testimonial.jpg";
+import Image from "./common/Image";
 
 export default function LargeTestimonial() {
   return (

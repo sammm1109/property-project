@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import LuxuryImg from "@/public/images/property/facilities2.jpg";
 import PdfImg from "@/public/images/property/pdf.png";
 import WhatsappImg from "@/public/images/property/whatsapp.png";
@@ -8,6 +7,7 @@ import { FacilitiesTabs, ResidentialLayoutTabs } from "./enum";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "./common/Image";
 
 export default function Facilities() {
   const [activeTab, setActiveTab] = useState(0);
@@ -144,7 +144,7 @@ export default function Facilities() {
               navigation
               pagination={{ clickable: true }} // Enable pagination dots
               onSwiper={(swiper) => console.log(swiper)} // Debugging swiper instance
-              onSlideChange={() => console.log("slide change")} // Slide change event
+              // onSlideChange={() => console.log("slide change")} // Slide change event
               className="text-center"
             >
               {ResidentialLayoutTabs[activeResidentialTab].image.map(

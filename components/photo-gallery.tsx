@@ -1,18 +1,14 @@
 "use client";
 import React, { useRef, useState } from "react";
-import Image from "next/image";
-import LuxuryImg from "@/public/images/property/facilities2.jpg";
-import PdfImg from "@/public/images/property/pdf.png";
-import WhatsappImg from "@/public/images/property/whatsapp.png";
-import { PhotoGalleryTabs, ResidentialLayoutTabs } from "./enum";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { PhotoGalleryTabs } from "./enum";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
+import Image from "./common/Image";
 
 export default function PhotoGallery() {
   const [activeTab, setActiveTab] = useState(0);
-  const [activeResidentialTab, setActiveResidentialTab] = useState(0);
   const swiperRef = useRef<SwiperCore | null>(null);
 
   const goToSlide = (index: number) => {
@@ -56,7 +52,7 @@ export default function PhotoGallery() {
                 navigation
                 pagination={{ clickable: true }}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
-                onSlideChange={() => console.log("slide change")}
+                // onSlideChange={() => console.log("slide change")}
                 className="text-center h-100"
               >
                 {PhotoGalleryTabs[activeTab].image.map((image, index) => (
