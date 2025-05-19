@@ -9,10 +9,14 @@ import PhotoGallery from "@/components/photo-gallery";
 import { ContactForm } from "@/components/contact-us";
 
 export const metadata = {
-  title: "Home - Simple",
+  title: "Pavilion Square | Home",
   description:
     "Discover the best solution for your business with our powerful tools.",
-
+  icons: {
+    icon: "/logo_big.png", // PNG favicon for the browser tab
+    apple: "/logo_big.png", // Apple touch icon for iOS
+    android: "/logo_big.png", // Android icon
+  },
   // Open Graph Meta Tags for Facebook
   openGraph: {
     title: "Home - Simple", // OG Title
@@ -47,6 +51,13 @@ export default function Home() {
   return (
     <>
       <Head>
+        <meta name="description" content="Discover luxury properties." />
+        {/* If you want a specific favicon */}
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <meta
+          name="google-site-verification"
+          content="your-verification-code"
+        />
         <meta property="og:locale:alternate" content="fr_FR" />
         <meta property="og:locale:alternate" content="de_DE" />
         {/* Add any other custom SEO/meta tags here if needed */}
