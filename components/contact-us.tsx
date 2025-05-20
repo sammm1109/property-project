@@ -57,11 +57,12 @@ export const ContactForm = () => {
       return;
     }
 
-    const serviceID = "service_0ycj971"; // from EmailJS dashboard
-    const templateID = "template_v0cacob"; // from EmailJS dashboard
-    const publicKey = "W-rM6iQox1CpAHGa8"; // from EmailJS dashboard
+    const serviceID = "service_0ycj971";
+    const templateID = "template_xn2jyyb"; // template 2
+    const publicKey = "W-rM6iQox1CpAHGa8";
 
     const templateParams = {
+      projectName: "Pavilion Square",
       name: formData.name,
       email: formData.email,
       purpose: formData.purpose,

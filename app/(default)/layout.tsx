@@ -35,9 +35,33 @@ export default function DefaultLayout({
     };
 
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+      // this.alert("right click disabled");
+    });
+    document.addEventListener("keydown", function (e) {
+      if (
+        (e.ctrlKey && e.shiftKey && e.key === "I") || // Ctrl+Shift+I
+        (e.ctrlKey && e.shiftKey && e.key === "J") || // Ctrl+Shift+J
+        (e.ctrlKey && e.key === "J") || // Ctrl+U
+        e.key === "F12" // F12
+      ) {
+        e.preventDefault();
+        alert("Keyboard shortcuts are disabled.");
+      }
+    });
+    // setInterval(() => {
+    //   if (
+    //     window.outerWidth - window.innerWidth > 160 ||
+    //     window.outerHeight - window.innerHeight > 160
+    //   ) {
+    //     alert("DevTools detected! Redirecting...");
+    //     window.location.replace("/");
+    //   }
+    // }, 500);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll); // Cleanup the event listener
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
