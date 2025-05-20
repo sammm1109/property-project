@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Map from "@/public/images/property/img_map1.jpg";
 import Image from "./common/Image";
+import { openWhatsAppMessage } from "./common/manager";
 
 export default function LocationMap() {
   const sectionRef = useRef(null);
@@ -69,12 +70,12 @@ export default function LocationMap() {
           />
         </div>
 
-        <a
+        <button
+          onClick={openWhatsAppMessage}
           className="btn w-full bg-green-400 text-gray-800 shadow-sm hover:bg-green-100 sm:ml-4 sm:w-auto mt-10"
-          href="#0"
         >
           VISIT US
-        </a>
+        </button>
       </div>
     </section>
   );

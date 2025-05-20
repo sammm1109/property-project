@@ -1,6 +1,7 @@
 import LuxuryImg from "@/public/images/property/luxury.jpg";
 import WhatsappImg from "@/public/images/property/whatsapp.png";
 import Image from "./common/Image";
+import { openWhatsAppMessage } from "./common/manager";
 
 export default function LuxuryResidence() {
   return (
@@ -32,15 +33,15 @@ export default function LuxuryResidence() {
                   various needs.
                 </p>
 
-                <a
+                <button
+                  onClick={openWhatsAppMessage}
                   className="flex gap-5 btn w-full bg-green-600 text-gray-800 shadow-sm hover:bg-green-100 sm:ml-4 sm:w-auto mt-10"
-                  href="#0"
                 >
                   <Image src={WhatsappImg} width={35} alt="whatsapp" />
                   <span className="text-xl font-semibold text-white">
                     LATEST PRICING
                   </span>
-                </a>
+                </button>
               </div>
             </div>
           </div>

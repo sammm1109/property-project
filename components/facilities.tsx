@@ -8,6 +8,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "./common/Image";
+import { openWhatsAppMessage } from "./common/manager";
 
 export default function Facilities() {
   const [activeTab, setActiveTab] = useState(0);
@@ -40,12 +41,12 @@ export default function Facilities() {
             friend gatherings.
           </p>
           <div>
-            <a
+            <button
+              onClick={openWhatsAppMessage}
               className="btn bg-green-600 text-white font-medium shadow-sm hover:bg-green-100 hover:text-black mt-10 text-lg"
-              href="#0"
             >
               FIND OUT MORE
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -159,11 +160,14 @@ export default function Facilities() {
         </div>
 
         <div className="text-center">
-          <a className="btn bg-green-500 text-gray-800" href="#0">
+          <button
+            onClick={openWhatsAppMessage}
+            className="btn bg-green-500 text-gray-800"
+          >
             <span className="text-lg text-white font-semibold">
               WHATSAPP FOR LATEST PRICING
             </span>
-          </a>
+          </button>
         </div>
       </div>
     </section>

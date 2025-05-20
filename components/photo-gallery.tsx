@@ -6,6 +6,7 @@ import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import Image from "./common/Image";
+import { openWhatsAppMessage } from "./common/manager";
 
 export default function PhotoGallery() {
   const [activeTab, setActiveTab] = useState(0);
@@ -85,12 +86,12 @@ export default function PhotoGallery() {
         </div>
 
         <div className="text-center">
-          <a
-            href="#0"
+          <button
+            onClick={openWhatsAppMessage}
             className="block w-full sm:w-auto btn bg-green-500 text-white font-semibold text-center text-base sm:text-lg px-4 py-2 rounded-md hover:bg-green-600 transition"
           >
             WHATSAPP FOR LATEST PRICING
-          </a>
+          </button>
         </div>
       </div>
     </section>

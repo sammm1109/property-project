@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "@/public/images/property/CS2.jpg";
 import emailjs from "@emailjs/browser";
+import { openWhatsAppMessage } from "./common/manager";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -194,12 +195,12 @@ export const ContactForm = () => {
                     </span>
                   </span>
                 </button>
-                <a
+                <button
+                  onClick={openWhatsAppMessage}
                   className="btn w-full text-lg bg-green-400 text-gray-800 shadow-sm hover:bg-green-100 sm:ml-4 sm:w-auto"
-                  href="#0"
                 >
                   CONTACT US
-                </a>
+                </button>
               </div>
             </div>
           </form>

@@ -7,6 +7,7 @@ import { OfficeLayoutTabs } from "./enum";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "./common/Image";
+import { openWhatsAppMessage } from "./common/manager";
 
 export default function CorporateSuites() {
   const [activeTab, setActiveTab] = useState(0);
@@ -75,12 +76,12 @@ export default function CorporateSuites() {
             ensures a secure and efficient arrival for your business needs.
           </p>
           <div>
-            <a
+            <button
+              onClick={openWhatsAppMessage}
               className="btn bg-green-600 text-white font-medium shadow-sm hover:bg-green-100 hover:text-black mt-10 text-lg"
-              href="#0"
             >
               FIND OUT MORE
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -133,12 +134,12 @@ export default function CorporateSuites() {
         </div>
 
         <div className="text-center">
-          <a
-            href="#0"
+          <button
+            onClick={openWhatsAppMessage}
             className="block w-full sm:w-auto btn bg-green-500 text-white font-semibold text-center text-base sm:text-lg px-4 py-2 rounded-md hover:bg-green-600 transition"
           >
             WHATSAPP FOR LATEST PRICING
-          </a>
+          </button>
         </div>
       </div>
     </section>
