@@ -113,7 +113,7 @@ export default function Facilities() {
         </div>
       </div>
       {/* RESIDENTIAL Layout */}
-      <div className="mx-auto px-5 md:px-20 py-10 bg-orange-500 flex flex-col gap-8">
+      <div className="mx-auto px-5 md:px-20 py-10 bg-[#ffe0cb] flex flex-col gap-8">
         <div
           className="text-5xl md:text-6xl text-center text-[#371809] tracking-wide"
           style={{ fontFamily: "ACaslonPro-Regular" }}

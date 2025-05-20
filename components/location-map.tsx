@@ -30,12 +30,12 @@ export default function LocationMap() {
   }, []);
 
   return (
-    <section id="location" className="bg-[#ee7025fc]" ref={sectionRef}>
+    <section id="location" className="bg-[#ffe0cb]" ref={sectionRef}>
       <div className="relative mx-auto max-w-6xl px-4 pb-10 sm:px-6 text-center">
         <div className="text-center">
           <p
             className={`
-              text-black text-4xl pb-10 transition-all duration-1000 ease-out
+              text-[#371807]  text-4xl transition-all duration-1000 ease-out
               ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}
             `}
             style={{ fontFamily: "ACaslonPro-Regular" }}
@@ -45,7 +45,7 @@ export default function LocationMap() {
 
           <p
             className={`
-              text-base text-white pb-10 transition-all duration-1000 ease-out delay-100
+              text-base text-black pb-10 transition-all duration-1000 ease-out delay-100
               ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}
             `}
           >

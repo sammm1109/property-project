@@ -101,8 +101,10 @@ export const ContactForm = () => {
         </div>
 
         {submitted ? (
-          <div className="text-green-600 font-medium z-10">
-            Thanks for contacting us!
+          <div className="bg-amber-100 w-full text-center p-2 rounded-full z-10">
+            <span className="text-black font-medium">
+              Thanks for contacting us! Will get back to you soon!
+            </span>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4 z-10">
@@ -154,8 +156,12 @@ export const ContactForm = () => {
                   onChange={handleChange}
                   className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 bg-transparent text-white"
                 >
-                  <option value="appointment">Make An Appointment</option>
-                  <option value="general">Request More Info</option>
+                  <option value="appointment" className="bg-black">
+                    Make An Appointment
+                  </option>
+                  <option value="general" className="bg-black">
+                    Request More Info
+                  </option>
                 </select>
 
                 {/* Message */}
@@ -168,7 +174,7 @@ export const ContactForm = () => {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 bg-transparent"
+                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 bg-transparent text-white"
                   />
                   {errors.message && (
                     <p className="text-red-500 text-lg">{errors.message}</p>
