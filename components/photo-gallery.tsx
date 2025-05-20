@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import Image from "./common/Image";
 import { openWhatsAppMessage } from "./common/manager";
+import { Button } from "./common/Button";
 
 export default function PhotoGallery() {
   const [activeTab, setActiveTab] = useState(0);
@@ -22,6 +23,8 @@ export default function PhotoGallery() {
         <div
           className="text-5xl md:text-6xl text-center text-[#371809] tracking-wide"
           style={{ fontFamily: "ACaslonPro-Regular" }}
+          data-aos="fade-down"
+          data-aos-delay={100}
         >
           PHOTO GALLERY
         </div>
@@ -85,13 +88,11 @@ export default function PhotoGallery() {
           </div>
         </div>
 
-        <div className="text-center">
-          <button
-            onClick={openWhatsAppMessage}
-            className="block w-full sm:w-auto btn bg-green-500 text-white font-semibold text-center text-base sm:text-lg px-4 py-2 rounded-md hover:bg-green-600 transition"
-          >
-            WHATSAPP FOR LATEST PRICING
-          </button>
+        <div className="flex justify-center">
+          <Button
+            label="WHATSAPP FOR LATEST PRICING"
+            onClickFunction={openWhatsAppMessage}
+          />
         </div>
       </div>
     </section>

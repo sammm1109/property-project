@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import CorporateImg from "@/public/images/property/corporate.jpg";
-import WhatsappImg from "@/public/images/property/whatsapp.png";
 import LuxuryImg from "@/public/images/property/corp2.jpg";
 import { OfficeLayoutTabs } from "./enum";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "./common/Image";
 import { openWhatsAppMessage } from "./common/manager";
+import { Button } from "./common/Button";
 
 export default function CorporateSuites() {
   const [activeTab, setActiveTab] = useState(0);
@@ -16,7 +16,11 @@ export default function CorporateSuites() {
       <div className="bg-[#371807] ">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 text-center">
           <div className="grid grid-cols-12 gap-5">
-            <div className="col-span-12 md:col-span-6">
+            <div
+              className="col-span-12 md:col-span-6"
+              data-aos="zoom-in"
+              data-aos-delay={120}
+            >
               <Image
                 className="relative shadow-2xl "
                 style={{ boxShadow: "0 4px 20px #fff" }}
@@ -25,7 +29,11 @@ export default function CorporateSuites() {
                 alt="corporate_img"
               />
             </div>
-            <div className="col-span-12 md:col-span-6 flex items-center justify-center">
+            <div
+              className="col-span-12 md:col-span-6 flex items-center justify-center"
+              data-aos="fade-left"
+              data-aos-delay={300}
+            >
               <div className="grid text-white gap-5">
                 <span
                   style={{ fontFamily: "ACaslonPro-Regular" }}
@@ -40,13 +48,12 @@ export default function CorporateSuites() {
                   with offices ranging from 1,093 sq.ft. to 9,769 sq.ft.
                 </p>
 
-                <button
-                  onClick={openWhatsAppMessage}
-                  className="flex gap-5 btn w-full bg-green-600 text-gray-800 shadow-sm hover:bg-green-100 sm:ml-4 sm:w-auto mt-10"
-                >
-                  <Image src={WhatsappImg} width={35} alt="whatsapp" />
-                  <span className="text-xl text-white">LATEST PRICING</span>
-                </button>
+                <div className="flex justify-center">
+                  <Button
+                    label="LATEST PRICING"
+                    onClickFunction={openWhatsAppMessage}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -75,14 +82,7 @@ export default function CorporateSuites() {
             bridge to Pavilion Kuala Lumpur. The lift destination control system
             ensures a secure and efficient arrival for your business needs.
           </p>
-          <div>
-            <button
-              onClick={openWhatsAppMessage}
-              className="btn bg-green-600 text-white font-medium shadow-sm hover:bg-green-100 hover:text-black mt-10 text-lg"
-            >
-              FIND OUT MORE
-            </button>
-          </div>
+          <Button label="FIND OUT MORE" onClickFunction={openWhatsAppMessage} />
         </div>
       </div>
 
@@ -133,13 +133,11 @@ export default function CorporateSuites() {
           </div>
         </div>
 
-        <div className="text-center">
-          <button
-            onClick={openWhatsAppMessage}
-            className="block w-full sm:w-auto btn bg-green-500 text-white font-semibold text-center text-base sm:text-lg px-4 py-2 rounded-md hover:bg-green-600 transition"
-          >
-            WHATSAPP FOR LATEST PRICING
-          </button>
+        <div className="flex justify-center">
+          <Button
+            label="ASK FOR LATEST PRICING"
+            onClickFunction={openWhatsAppMessage}
+          />
         </div>
       </div>
     </section>

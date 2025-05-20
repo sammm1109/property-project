@@ -19,7 +19,7 @@ export default function DefaultLayout({
   // Initialize AOS for animations
   useEffect(() => {
     AOS.init({
-      once: true,
+      once: false,
       disable: "phone",
       duration: 700,
       easing: "ease-out-cubic",

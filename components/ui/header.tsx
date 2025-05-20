@@ -1,5 +1,9 @@
 import Link from "next/link";
 import Logo from "./logo";
+import Image from "../common/Image";
+import WhatsappImg from "@/public/images/property/whatsapp.png";
+import { openWhatsAppMessage } from "../common/manager";
+import { Button } from "../common/Button";
 
 export default function Header() {
   return (
@@ -14,11 +18,37 @@ export default function Header() {
           {/* Desktop sign in links */}
           <ul className="flex flex-1 items-center justify-end gap-3">
             <li>
+              <Button
+                label="Contact Us"
+                onClickFunction={openWhatsAppMessage}
+                src={WhatsappImg}
+                alt="whatsapp"
+                imageWidth={20}
+                customBtnStyle="btn-sm"
+                customLabelStyle="text-black text-normal"
+              />
+              {/* <button
+                onClick={openWhatsAppMessage}
+                className="btn-sm bg-green-400 text-black shadow-sm hover:bg-gray-900"
+              >
+                <Image
+                  src={WhatsappImg}
+                  width={20}
+                  alt="whatsapp"
+                  className="mr-1"
+                />
+                Contact Us
+              </button> */}
+            </li>
+            <li>
               <Link
                 href="#contact-us"
-                className="btn-sm bg-gray-800 text-gray-200 shadow-sm hover:bg-gray-900"
+                className="btn-sm bg-[#c75513] text-gray-200 shadow-sm hover:bg-gray-900"
               >
                 Register
+                <span className="ml-1 tracking-normal text-white transition-transform group-hover:translate-x-0.5 group-hover:text-[#c75513]">
+                  -&gt;
+                </span>
               </Link>
             </li>
           </ul>

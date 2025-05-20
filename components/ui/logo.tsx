@@ -5,7 +5,7 @@ import Image from "../common/Image";
 export default function Logo() {
   return (
     <Link href="/" className="inline-flex" aria-label="Cruip">
-      <div className="relative bg-gray-200 py-2 px-4 rounded-4xl">
+      <div className="relative bg-[#371809] py-2 px-4 rounded-4xl">
         <Image
           className="relative"
           src={logoImg}

@@ -13,7 +13,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               <Image
                 src={Logo}
                 alt="footer-log"
-                className="max-w-full h-auto md:h-30 w-auto"
+                className="max-w-full h-10 md:h-30 w-auto"
               />
             </div>
             <div className="col-span-12 md:col-span-9">

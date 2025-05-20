@@ -8,6 +8,7 @@ import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "./common/Image";
 import { openWhatsAppMessage } from "./common/manager";
+import { Button } from "./common/Button";
 
 export default function Facilities() {
   const [activeTab, setActiveTab] = useState(0);
@@ -39,14 +40,7 @@ export default function Facilities() {
             room, entertainment room, and BBQ deck are great for family and
             friend gatherings.
           </p>
-          <div>
-            <button
-              onClick={openWhatsAppMessage}
-              className="btn bg-green-600 text-white font-medium shadow-sm hover:bg-green-100 hover:text-black mt-10 text-lg"
-            >
-              FIND OUT MORE
-            </button>
-          </div>
+          <Button label="FIND OUT MORE" onClickFunction={openWhatsAppMessage} />
         </div>
       </div>
       {/* Facilities Plan */}
@@ -100,16 +94,13 @@ export default function Facilities() {
           </div>
         </div>
 
-        <div className="text-center">
-          <button
-            onClick={openWhatsAppMessage}
-            className="btn bg-green-500 text-gray-800"
-          >
-            <Image src={PdfImg} width={45} alt="e-brochure" />
-            <span className="text-lg text-white font-semibold">
-              DOWNLOAD E-BROCHURE
-            </span>
-          </button>
+        <div className="flex justify-center">
+          <Button
+            label="ASK FOR LATEST PRICING"
+            onClickFunction={openWhatsAppMessage}
+            alt="whatsapp"
+            src={PdfImg}
+          />
         </div>
       </div>
       {/* RESIDENTIAL Layout */}
@@ -161,15 +152,11 @@ export default function Facilities() {
           </div>
         </div>
 
-        <div className="text-center">
-          <button
-            onClick={openWhatsAppMessage}
-            className="btn bg-green-500 text-gray-800"
-          >
-            <span className="text-lg text-white font-semibold">
-              WHATSAPP FOR LATEST PRICING
-            </span>
-          </button>
+        <div className="flex justify-center">
+          <Button
+            label="WHATSAPP FOR LATEST PRICING"
+            onClickFunction={openWhatsAppMessage}
+          />
         </div>
       </div>
     </section>

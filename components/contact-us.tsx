@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "@/public/images/property/CS2.jpg";
 import emailjs from "@emailjs/browser";
 import { openWhatsAppMessage } from "./common/manager";
+import { Button } from "./common/Button";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -96,6 +97,8 @@ export const ContactForm = () => {
         <div
           className="text-4xl md:text-5xl tracking-wide text-white z-10 text-center"
           style={{ fontFamily: "ACaslonPro-Regular" }}
+          data-aos="fade-down"
+          data-aos-delay={100}
         >
           REGISTER YOUR INTEREST NOW !
         </div>
@@ -186,9 +189,9 @@ export const ContactForm = () => {
             {/* Submit */}
             <div>
               <div
-                className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
-                data-aos="zoom-y-out"
-                data-aos-delay={450}
+                className="mx-auto max-w-xs sm:max-w-none flex justify-center gap-3"
+                data-aos="zoom-y-in"
+                data-aos-delay={300}
               >
                 <button
                   type="submit"
@@ -201,12 +204,10 @@ export const ContactForm = () => {
                     </span>
                   </span>
                 </button>
-                <button
-                  onClick={openWhatsAppMessage}
-                  className="btn w-full text-lg bg-green-400 text-gray-800 shadow-sm hover:bg-green-100 sm:ml-4 sm:w-auto"
-                >
-                  CONTACT US
-                </button>
+                <Button
+                  label="Contact us"
+                  onClickFunction={openWhatsAppMessage}
+                />
               </div>
             </div>
           </form>
