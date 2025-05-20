@@ -91,7 +91,7 @@ export const ContactForm = () => {
         }}
       >
         {/* Add overlay to background */}
-        <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
+        <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
 
         {/* Form Heading */}
         <div
@@ -123,7 +123,7 @@ export const ContactForm = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 bg-transparent"
+                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 bg-transparent text-white"
                   />
                   {errors.name && (
                     <p className="text-red-500 text-lg">{errors.name}</p>
@@ -140,7 +140,7 @@ export const ContactForm = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 bg-transparent"
+                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 bg-transparent text-white"
                   />
                   {errors.email && (
                     <p className="text-red-500 text-lg">{errors.email}</p>
