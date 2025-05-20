@@ -2,9 +2,8 @@
 import React, { useState } from "react";
 import LuxuryImg from "@/public/images/property/facilities2.jpg";
 import PdfImg from "@/public/images/property/pdf.png";
-import WhatsappImg from "@/public/images/property/whatsapp.png";
 import { FacilitiesTabs, ResidentialLayoutTabs } from "./enum";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "./common/Image";
@@ -102,12 +101,15 @@ export default function Facilities() {
         </div>
 
         <div className="text-center">
-          <a className="btn bg-green-500 text-gray-800" href="#0">
+          <button
+            onClick={openWhatsAppMessage}
+            className="btn bg-green-500 text-gray-800"
+          >
             <Image src={PdfImg} width={45} alt="e-brochure" />
             <span className="text-lg text-white font-semibold">
               DOWNLOAD E-BROCHURE
             </span>
-          </a>
+          </button>
         </div>
       </div>
       {/* RESIDENTIAL Layout */}

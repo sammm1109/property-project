@@ -40,13 +40,13 @@ export default function CorporateSuites() {
                   with offices ranging from 1,093 sq.ft. to 9,769 sq.ft.
                 </p>
 
-                <a
+                <button
+                  onClick={openWhatsAppMessage}
                   className="flex gap-5 btn w-full bg-green-600 text-gray-800 shadow-sm hover:bg-green-100 sm:ml-4 sm:w-auto mt-10"
-                  href="#0"
                 >
                   <Image src={WhatsappImg} width={35} alt="whatsapp" />
                   <span className="text-xl text-white">LATEST PRICING</span>
-                </a>
+                </button>
               </div>
             </div>
           </div>
