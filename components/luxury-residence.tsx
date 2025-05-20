@@ -1,3 +1,4 @@
+"use client";
 import LuxuryImg from "@/public/images/property/luxury.jpg";
 import WhatsappImg from "@/public/images/property/whatsapp.png";
 import Image from "./common/Image";
