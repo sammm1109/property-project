@@ -1,5 +1,4 @@
 // app/page.tsx
-import Head from "next/head";
 import HomePage from "@/components/home";
 import LocationMap from "@/components/location-map";
 import LuxuryResidence from "@/components/luxury-residence";
@@ -24,6 +23,8 @@ export const metadata = {
     "fb:pages": "",
     "fb:admins": "",
     "fb:app_id": "",
+    "og:locale:alternate": "en_US",
+    "google-site-verification": "your-verification-code",
   },
   // Open Graph Meta Tags for Facebook
   openGraph: {
@@ -64,17 +65,6 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Head>
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <meta
-          name="google-site-verification"
-          content="your-verification-code"
-        />
-        <meta property="og:locale:alternate" content="fr_FR" />
-        <meta property="og:locale:alternate" content="de_DE" />
-        {/* Add any other custom SEO/meta tags here if needed */}
-      </Head>
-
       {/* Landing page sections */}
       <HomePage />
       <LocationMap />
