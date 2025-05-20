@@ -3,7 +3,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// import Header from "@/components/ui/header";
+import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -48,7 +48,7 @@ export default function DefaultLayout({
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
 
       <main className="grow">{children}</main>
 

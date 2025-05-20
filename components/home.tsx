@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="relative bg-no-repeat bg-center bg-cover h-lvh"
+      className="relative bg-no-repeat bg-center bg-cover h-[70vh]"
       style={{
         backgroundImage: `url(${HeaderImg.src})`,
       }}
@@ -56,6 +56,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#f37021] to-transparent z-0 pointer-events-none"></div>
       </div>
     </section>
   );
