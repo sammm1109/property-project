@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "@/public/images/property/CS2.jpg";
+import emailjs from "@emailjs/browser";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -32,17 +33,49 @@ export const ContactForm = () => {
     return newErrors;
   };
 
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   const validationErrors = validate();
+  //   if (Object.keys(validationErrors).length > 0) {
+  //     setErrors(validationErrors);
+  //     return;
+  //   }
+
+  //   // Here you can send formData to a backend or service
+  //   console.log("Form submitted:", formData);
+  //   setSubmitted(true);
+  // };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
 
-    // Here you can send formData to a backend or service
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
+    const serviceID = "service_0ycj971"; // from EmailJS dashboard
+    const templateID = "template_v0cacob"; // from EmailJS dashboard
+    const publicKey = "W-rM6iQox1CpAHGa8"; // from EmailJS dashboard
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      purpose: formData.purpose,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(serviceID, templateID, templateParams, publicKey)
+      .then(() => {
+        console.log("Email successfully sent!");
+        setSubmitted(true);
+      })
+      .catch((error) => {
+        console.error("Email sending error:", error);
+        alert("Failed to send message. Please try again later.");
+      });
   };
 
   return (

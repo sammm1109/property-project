@@ -1,6 +1,8 @@
+"use client";
 import HeaderImg from "@/public/images/property/header.jpg";
 import Logo from "@/public/images/property/logo_big.png";
 import Image from "./common/Image";
+import { openWhatsAppMessage } from "./common/manager";
 
 export default function Home() {
   return (
@@ -23,7 +25,7 @@ export default function Home() {
               alt="Logo_big"
             />
           </div>
-          {/* button */}
+          {/* Buttons */}
           <div className="pb-12 text-center pt-39 md:pb-16">
             <div className="mx-auto max-w-3xl">
               <div className="relative before:absolute before:inset-0 ">
@@ -34,7 +36,7 @@ export default function Home() {
                 >
                   <a
                     className="btn group mb-4 w-full bg-[#c75513] bg-[bottom] text-white shadow-sm hover:bg-amber-50 hover:text-[#c75513] hover:border-[#c75513] hover:border-1 sm:mb-0 sm:w-auto"
-                    href="#0"
+                    href="#"
                   >
                     <span className="relative inline-flex items-center">
                       SCHEDULE FOR VIEWING{" "}
@@ -43,12 +45,12 @@ export default function Home() {
                       </span>
                     </span>
                   </a>
-                  <a
+                  <button
+                    onClick={openWhatsAppMessage}
                     className="btn w-full bg-green-400 text-gray-800 shadow-sm hover:bg-green-100 sm:ml-4 sm:w-auto"
-                    href="#0"
                   >
                     ASK FOR EARLY BIRD PROMO NOW
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
