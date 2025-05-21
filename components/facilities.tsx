@@ -140,6 +140,7 @@ export default function Facilities() {
               onSwiper={(swiper) => console.log(swiper)} // Debugging swiper instance
               // onSlideChange={() => console.log("slide change")} // Slide change event
               className="text-center"
+              autoHeight={true}
             >
               {ResidentialLayoutTabs[activeResidentialTab].image.map(
                 (image, index) => (

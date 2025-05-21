@@ -55,6 +55,7 @@ export default function PhotoGallery() {
                 navigation
                 pagination={{ clickable: true }}
                 className="w-full"
+                autoHeight={true}
               >
                 {PhotoGalleryTabs[activeTab].image.map((image, index) => (
                   <SwiperSlide key={index}>
