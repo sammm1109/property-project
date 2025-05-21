@@ -12,7 +12,7 @@ export default function Home() {
       }}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 ">
-        <div className="pb-12 pt-[40%] md:pb-20 md:pt-[25%] lg:pt-[30%]">
+        <div className="pb-12 pt-[40%] md:pb-20 md:pt-[15%] xl:pt-[30%]">
           {/* Logo */}
           <div className="relative flex justify-center">
             <Image
