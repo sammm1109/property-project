@@ -196,7 +196,7 @@ export const ContactForm = () => {
               >
                 <button
                   type="submit"
-                  className="btn group mb-4 w-full bg-[#c75513] bg-[bottom] text-white shadow-sm hover:bg-amber-50 hover:text-[#c75513] hover:border-[#c75513] hover:border-1 sm:mb-0 sm:w-auto"
+                  className="btn group w-full bg-[#c75513] bg-[bottom] text-white shadow-sm hover:bg-amber-50 hover:text-[#c75513] hover:border-[#c75513] hover:border-1 sm:mb-0 sm:w-auto"
                 >
                   <span className="relative inline-flex text-lg items-center">
                     REGISTER

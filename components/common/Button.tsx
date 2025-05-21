@@ -23,7 +23,7 @@ export function Button({
   return (
     <button
       onClick={onClickFunction}
-      className={`flex gap-3 bg-green-400 shadow-sm cursor-pointer ${customBtnStyle} `}
+      className={`flex gap-[0.5] md:gap-2 bg-green-400 shadow-sm cursor-pointer ${customBtnStyle} `}
     >
       {src && <Image src={src} width={imageWidth} alt={`icon_${alt}`} />}
 

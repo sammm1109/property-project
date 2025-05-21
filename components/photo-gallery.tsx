@@ -57,7 +57,7 @@ export default function PhotoGallery() {
                 pagination={{ clickable: true }}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 // onSlideChange={() => console.log("slide change")}
-                className="text-center h-100"
+                className="text-center h-100 md:h-165"
               >
                 {PhotoGalleryTabs[activeTab].image.map((image, index) => (
                   <SwiperSlide key={index}>
