@@ -1,9 +1,9 @@
 "use client";
 import LuxuryImg from "@/public/images/property/luxury.jpg";
 import WhatsappImg from "@/public/images/property/whatsapp.png";
-import Image from "./common/Image";
 import { openWhatsAppMessage } from "./common/manager";
 import { Button } from "./common/Button";
+import Image from "next/image";
 
 export default function LuxuryResidence() {
   return (
@@ -11,17 +11,15 @@ export default function LuxuryResidence() {
       <div className="bg-[#371807] ">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 text-center">
           <div className="grid grid-cols-12 gap-5">
-            <div
-              className="col-span-12 md:col-span-6"
-              data-aos="zoom-in"
-              data-aos-delay={120}
-            >
+            <div className="relative col-span-12 md:col-span-6 w-full h-[500px] md:h-[600px]">
               <Image
-                className="relative shadow-2xl "
+                className="object-cover shadow-2xl "
                 style={{ boxShadow: "0 4px 20px #fff" }}
                 src={LuxuryImg}
-                height={500}
+                fill
                 alt="corporate_img"
+                data-aos="zoom-in"
+                data-aos-delay={120}
               />
             </div>
             <div

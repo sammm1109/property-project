@@ -1,9 +1,7 @@
 "use client";
 import HeaderImg from "@/public/images/property/header.jpg";
 import Logo from "@/public/images/property/logo_big.png";
-import Image from "./common/Image";
-import { openWhatsAppMessage } from "./common/manager";
-
+import Image from "next/image";
 export default function Home() {
   return (
     <section
@@ -14,14 +12,14 @@ export default function Home() {
       }}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 ">
-        <div className="pb-12 pt-[30%] md:pb-20 md:pt-[15%]">
+        <div className="pb-12 pt-[40%] md:pb-20 md:pt-[25%] lg:pt-[30%]">
           {/* Logo */}
-          <div className="flex justify-center">
+          <div className="relative flex justify-center">
             <Image
-              className="relative"
+              className="object-cover"
               src={Logo}
-              width={250}
-              height={250}
+              width={350}
+              height={350}
               alt="Logo_big"
             />
           </div>

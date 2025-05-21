@@ -1,8 +1,8 @@
 "use client";
 import Map from "@/public/images/property/img_map1.jpg";
-import Image from "./common/Image";
 import { openWhatsAppMessage } from "./common/manager";
 import { Button } from "./common/Button";
+import Image from "next/image";
 
 export default function LocationMap() {
   return (
@@ -31,17 +31,15 @@ export default function LocationMap() {
           </p>
         </div>
 
-        <div
-          className="flex justify-center"
-          data-aos="zoom-in"
-          data-aos-delay={450}
-        >
+        <div className="relative flex justify-center">
           <Image
-            className="relative"
+            className="object-cover"
             src={Map}
             width={950}
             height={950}
             alt="pavilion square location map"
+            data-aos="zoom-in"
+            data-aos-delay={450}
           />
         </div>
         <div className="flex justify-center pt-5">

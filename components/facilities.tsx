@@ -6,9 +6,9 @@ import { FacilitiesTabs, ResidentialLayoutTabs } from "./enum";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "./common/Image";
 import { openWhatsAppMessage } from "./common/manager";
 import { Button } from "./common/Button";
+import Image from "next/image";
 
 export default function Facilities() {
   const [activeTab, setActiveTab] = useState(0);
@@ -144,7 +144,13 @@ export default function Facilities() {
               {ResidentialLayoutTabs[activeResidentialTab].image.map(
                 (image, index) => (
                   <SwiperSlide key={index}>
-                    <Image src={image} alt={`layout ${index}`} />
+                    <div className="flex justify-center w-full">
+                      <Image
+                        src={image}
+                        className="object-cover"
+                        alt={`layout ${index}`}
+                      />
+                    </div>
                   </SwiperSlide>
                 )
               )}

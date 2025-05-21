@@ -1,5 +1,4 @@
-import { StaticImageData } from "next/image";
-import Image from "./Image";
+import Image, { StaticImageData } from "next/image";
 
 interface ButtonProps {
   label: string;
