@@ -2,12 +2,11 @@
 import React, { useRef, useState } from "react";
 import { PhotoGalleryTabs } from "./enum";
 import { Navigation, Pagination, A11y } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
-import Image from "./common/Image";
 import { openWhatsAppMessage } from "./common/manager";
 import { Button } from "./common/Button";
+import Image from "next/image";
 
 export default function PhotoGallery() {
   const [activeTab, setActiveTab] = useState(0);
@@ -55,19 +54,20 @@ export default function PhotoGallery() {
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
-                onSwiper={(swiper) => (swiperRef.current = swiper)}
-                // onSlideChange={() => console.log("slide change")}
-                className="text-center h-100 md:h-165"
+                className="w-full"
+                autoHeight={true}
               >
                 {PhotoGalleryTabs[activeTab].image.map((image, index) => (
                   <SwiperSlide key={index}>
-                    <Image
-                      src={image}
-                      alt={`layout ${index}`}
-                      fill
-                      className="object-cover"
-                      sizes="100vw"
-                    />
+                    <div className="relative w-full aspect-[16/9]">
+                      <Image
+                        src={image}
+                        alt={`layout ${index}`}
+                        fill
+                        className="object-cover"
+                        sizes="100vw"
+                      />
+                    </div>
                   </SwiperSlide>
                 ))}
               </Swiper>

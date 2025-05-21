@@ -5,9 +5,9 @@ import LuxuryImg from "@/public/images/property/corp2.jpg";
 import { OfficeLayoutTabs } from "./enum";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "./common/Image";
 import { openWhatsAppMessage } from "./common/manager";
 import { Button } from "./common/Button";
+import Image from "next/image";
 
 export default function CorporateSuites() {
   const [activeTab, setActiveTab] = useState(0);
@@ -16,17 +16,15 @@ export default function CorporateSuites() {
       <div className="bg-[#371807] ">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 text-center">
           <div className="grid grid-cols-12 gap-5">
-            <div
-              className="col-span-12 md:col-span-6"
-              data-aos="zoom-in"
-              data-aos-delay={120}
-            >
+            <div className="relative col-span-12 md:col-span-6 w-full h-[500px] md:h-[600px]">
               <Image
-                className="relative shadow-2xl "
+                className="object-cover shadow-2xl"
                 style={{ boxShadow: "0 4px 20px #fff" }}
                 src={CorporateImg}
-                height={500}
+                fill
                 alt="corporate_img"
+                data-aos="zoom-in"
+                data-aos-delay={120}
               />
             </div>
             <div
@@ -61,11 +59,17 @@ export default function CorporateSuites() {
       </div>
 
       <div className="mx-auto pb-10 bg-[#caa777]">
-        <Image
-          className="relative w-full"
-          src={LuxuryImg}
-          alt="corporate_img"
-        />
+        <div className="relative col-span-12 md:col-span-6 w-full h-[500px] md:h-[600px]">
+          <Image
+            className="object-cover"
+            style={{ boxShadow: "0 4px 20px #fff" }}
+            src={LuxuryImg}
+            fill
+            alt="corporate_img"
+            data-aos="zoom-in"
+            data-aos-delay={120}
+          />
+        </div>
 
         <div className="flex flex-col gap-4 text-lg m-auto py-5 px-5 md:px-20">
           <p
@@ -113,24 +117,16 @@ export default function CorporateSuites() {
 
         {/* Tab Content */}
         <div className="bg-white p-6 rounded-xl shadow">
-          <div className="w-full">
-            <Swiper
-              modules={[Navigation, Pagination, A11y]}
-              loop={true}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }} // Enable pagination dots
-              onSwiper={(swiper) => console.log(swiper)} // Debugging swiper instance
-              // onSlideChange={() => console.log("slide change")} // Slide change event
-              className="text-center"
-            >
-              {OfficeLayoutTabs[activeTab].image.map((image, index) => (
-                <SwiperSlide key={index}>
-                  <Image src={image} alt={`layout ${index}`} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+          {OfficeLayoutTabs[activeTab].image.map((image, index) => (
+            <div key={index} className="flex justify-center w-full">
+              <Image
+                src={image}
+                alt={`layout ${index}`}
+                className="object-cover"
+                style={{ boxShadow: "0 4px 20px #fff" }}
+              />
+            </div>
+          ))}
         </div>
 
         <div className="flex justify-center">

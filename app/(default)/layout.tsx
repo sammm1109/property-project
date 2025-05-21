@@ -81,10 +81,10 @@ export default function DefaultLayout({
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-blue-400 text-black hover:border-1 hover:border-blue-600 hover:bg-blue-400 hover:text-black shadow-lg transition-colors"
+          className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-12 h-12 rounded-full bg-[#c75513] text-white  shadow-lg transition-colors"
           aria-label="Scroll to top"
         >
-          <FontAwesomeIcon icon={faArrowUp} className="w-5 h-5" />
+          <FontAwesomeIcon icon={faArrowUp} className="w-10 h-10 text-xl" />
         </button>
       )}
     </>
