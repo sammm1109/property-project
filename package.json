@@ -5,8 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "copy:media": "node scripts/copy-media.js",
-    "deploy": "npm run build && npm run copy:media && firebase deploy --only hosting",
     "start": "next start",
     "lint": "next lint"
   },
