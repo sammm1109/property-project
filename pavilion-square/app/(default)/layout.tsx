@@ -72,12 +72,10 @@ export default function DefaultLayout({
 
   return (
     <>
+      kjk
       <Header />
-
       <main className="grow">{children}</main>
-
       <Footer border={true} />
-
       {showButton && (
         <button
           onClick={scrollToTop}
